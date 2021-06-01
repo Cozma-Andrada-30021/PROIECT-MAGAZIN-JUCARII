@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles/details.css" />
+    <script type="text/javascript" src="libs/vue.js"></script>
+    <script type="text/javascript" src="libs/axios.js"></script>
+</head>
+
+<body>
+    <a href="index.html">Home</a>
+    <div id="details">
+        <h1>Detalii pentru produsul cu id-ul: {{ id }}</h1>
+        <div class="container">
+            <div class="custom"></div>
+            <div class="label">Nume:</div>
+            <div class="value">{{toy.nume}}</div>
+        </div>
+
+        <div class="label">Culoare:</div>
+        <div class="value">{{toy.culoare}}</div>
+
+        <div class="label">Pret:</div>
+        <div class="value">{{toy.pret}}</div>
+
+        <div class="label">Descriere:</div>
+        <div class="value">{{toy.descriere}}</div>
+
+        <div class="label">Varsta:</div>
+        <div class="value">{{toy.varsta}}</div>
+
+        <div class="label">Material:</div>
+        <div class="value">{{toy.material}}</div>
+
+        <div class="label">Producator:</div>
+        <div class="value">{{toy.producator}}</div>
+
+        <div class="label">Pentru:</div>
+        <div class="value">{{toy.pentru}}</div>
+
+        <div class="label">Piese Mici:</div>
+        <div class="value">{{toy.pieseMici}}</div>
+
+    </div>
+    <script src="src/details.js"></script>
+</body>
+
+</html>

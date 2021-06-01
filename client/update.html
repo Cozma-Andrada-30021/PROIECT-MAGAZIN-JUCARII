@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <script type="text/javascript" src="libs/vue.js"></script>
+        <script type="text/javascript" src="libs/axios.js"></script>
+    </head>
+    <body>
+        <a href="index.html">Home</a>
+        <div id="update">
+            Actualizare jucarie cu id-ul: {{ id }} <br>
+            Nume: <input type="text" v-model="toy.nume">
+            Pret: <input type="text" v-model="toy.pret">
+            Culoare: <input type="text" v-model="toy.culoare">
+            Descriere: <input type="text" v-model="toy.descriere">
+            Varsta: <input type="text" v-model="toy.varsta">
+            Material: <input type="text" v-model="toy.material">
+            Producator: <input type="text" v-model="toy.producator">
+            Pentru: <input type="text" v-model="toy.pentru">
+            Piese Mici: <input type="text" v-model="toy.pieseMici">
+
+            <button  v-on:click="update(toy.id)">Save</button>
+
+            <p>{{message}}</p>
+
+        </div>
+
+        <script src="src/update.js"></script>
+    </body>
+</html>

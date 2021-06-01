@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+  <meta content="utf-8" http-equiv="encoding" />
+  <title>Magazin Jucarii</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/vue-material.css" />
+  <script type="text/javascript" src="libs/vue.js"></script>
+  <script type="text/javascript" src="libs/vue-material.js"></script>
+  <script type="text/javascript" src="libs/axios.js"></script>
+  <script type="text/javascript" src="src/toy-service.js"></script>
+</head>
+
+<body>
+  <div id="app">
+
+    <div class="title">Jucarii</div>
+
+    <p style="text-align: center" v-if="toys.length == 0">No toys found</p>
+
+    <ul class="user-list" v-if="toys.length > 0">
+      <li>
+        <div class="user-row-header">
+          <div class="user-name">Nume</div>
+          <div class="user-city">Pret</div>
+          <div class="user-city">Varsta</div>
+          <div class="user-city">Material</div>
+          <div class="user-city">Culoare</div>
+          <div class="user-city">Options</div>
+          <a class="" :href="'add.html?'">Add toy</a>
+        </div>
+      </li>
+
+      <li v-for="toy in toys">
+        <div class="">
+          <a class="user-city" :href="'details.html?id='+toy.id">{{ toy.nume }}</a>
+          <span class="user-city"><i>{{ toy.pret }}</i></span>
+          <span class="user-city"><i>{{ toy.varsta }}</i></span>
+          <span class="user-city"><i>{{ toy.material }}</i></span>
+          <span class="user-city"><i>{{ toy.culoare }}</i></span>
+          <button v-on:click="deleteToy(toy.id)">Delete</button>
+          <a :href="'update.html?id='+toy.id" target="_self">Update</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <script src="src/app.js"></script>
+</body>
+
+</html>
